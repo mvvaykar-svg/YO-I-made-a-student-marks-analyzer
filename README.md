@@ -1,27 +1,36 @@
-###Student Marks Analyzer - Pandas Project
+# Student Grade Analyzer - Automated Academic Reporting System
 
-Mera pehla Python automation project jo teacher ka 1 ghante ka kaam 2 second me karta hai.
+A Python-based automation tool that streamlines student performance analysis and report card generation.
 
-**Code Kya Karta Hai:**
-1.  5 students ka data leta hai (Name, Math, Science, English)
-2.  `sum(axis=1)` se har student ka Total nikalta hai
-3.  `Total / 3` se Average nikalta hai
-4.  `lambda` function se Pass/Fail check karta hai (>=35 Pass)
-5.  `idxmax()` se Topper nikalta hai
-6.  `value_counts()` se kitne Pass/Fail hai batata hai
+## Overview
+This system automates the manual process of calculating student results, reducing analysis time from hours to seconds for 100+ records.
 
-**Output:**
-- Puri marksheet table
-- Class Average
-- Topper Name + Highest Total
-- Pass/Fail Summary
+## Key Features
+- **Automated Calculation:** Computes Total, Average, Result (Pass/Fail) and Grade (A/B/C/F)
+- **Top Performer Detection:** Uses `idxmax()` to identify topper with highest total
+- **Result Analytics:** Generates Pass/Fail distribution using `value_counts()`
+- **Grade Classification:** Smart grading logic (A: >=85, B: >=60, C: >=35, F: <35)
+- **Visual Report Cards:** Auto-generates printable PNG report cards for each student
+- **Class Insights:** Calculates overall class average and performance summary
 
-**Tech Stack:** Python, Pandas
+## Tech Stack
+- Python 3.x
+- Pandas - Data manipulation and analysis
+- Pillow (PIL) - Report card image generation
 
-**Maine Kya Sikha:**
-- DataFrame banana
-- Row-wise sum karna
-- lambda + apply ka use
-- Real data analysis
+## Code Logic
+1. Creates DataFrame from student records
+2. Performs row-wise aggregation for Total Marks
+3. Applies lambda functions for Result and Grade evaluation
+4. Generates individual report cards with color-coded grades
 
-**Next Update:** Isme Excel file se data lena + Report Card PNG banana (card.py) add karunga.
+## Output
+- Formatted marksheet table
+- Class average and topper details
+- Result and grade distribution
+- `/cards` folder with individual report cards
+
+## How to Run
+```bash
+pip install pandas pillow
+python card.py
