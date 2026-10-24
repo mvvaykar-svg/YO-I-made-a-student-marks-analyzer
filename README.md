@@ -1,4 +1,4 @@
-#Student Marks Analyzer - Pandas Project
+###Student Marks Analyzer - Pandas Project
 
 Mera pehla Python automation project jo teacher ka 1 ghante ka kaam 2 second me karta hai.
 
