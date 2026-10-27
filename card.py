@@ -20,7 +20,7 @@ df["Result"] = df["Average"].apply(lambda x: "Pass" if x >= 35 else "Fail")
 
 # Grade Logic - Simple
 df["Grade"] = df["Average"].apply(
-    lambda x: "A" if x >= 85 else "B" if x >= 60 else "C" if x >= 35 else "F"
+    lambda x: "A" if x >= 85 else "B" if x >= 60 else "C" if x >= 35 else "Fail"
 )
 
 # Topper
